@@ -1,0 +1,12 @@
+plugin: azure_rm
+include_vm_resource_groups:
+  - ansible-inventory-test-rg
+auth_source: auto
+# You can probably get what properties you can search by going to the Azure Resource Explorer
+# you can something like ansible-inventory -i myazure_rm.yml --list to get the potential valies
+conditional_groups:
+  linux: "'CentOS' in image.offer"
+  windows: "'WindowsServer' in image.offer"
+  mongo: "'mongovm' in name"
+keyed_groups:
+ - key: tags.applicationRole
