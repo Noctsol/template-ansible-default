@@ -1,0 +1,10 @@
+
+- name: Test to see if we can connect to host
+  hosts: all
+  become: yes
+  serial: 0
+  tasks:
+  - name: Show groups
+    debug:
+      msg: "{{group_names}}"
+
