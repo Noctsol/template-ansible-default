@@ -1,6 +1,6 @@
 all:
   hosts:
-    mail.example.com:
+    Noctsol:
       somehostvar: yodude
   children:
     webservers:

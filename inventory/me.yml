@@ -1,0 +1,4 @@
+all:
+  hosts:
+    Noctsol:
+      somehostvar: yodude
