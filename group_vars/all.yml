@@ -1,2 +1,4 @@
 ansible_ssh_user: yourremoteuser
 ansible_ssh_pass: yourremotepass
+
+group_bool: true
