@@ -1,8 +1,7 @@
 
 - name: Test to see if we can connect to host
-  hosts: all
-  become: yes
-  serial: 0
+  hosts: localhost
+  # become: yes
   tasks:
   - name: Show groups
     debug:

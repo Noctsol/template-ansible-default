@@ -1,0 +1,16 @@
+all:
+  hosts:
+    mail.example.com:
+      somehostvar: yodude
+  children:
+    webservers:
+      grp_var1: dodidid
+      hosts:
+        foo.example.com:
+          remote_host_var: somevalue
+        bar.example.com:
+    dbservers:
+      hosts:
+        one.example.com:
+        two.example.com:
+        three.example.com:
