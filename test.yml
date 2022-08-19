@@ -1,9 +1,0 @@
-
-- name: Test to see if we can connect to host
-  hosts: localhost
-  # become: yes
-  tasks:
-  - name: Show groups
-    debug:
-      msg: "{{group_names}}"
-

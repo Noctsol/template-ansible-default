@@ -1,0 +1,53 @@
+
+- name: Run as user on localhost
+  hosts: localhost
+  tasks:
+  - name: Show groups
+    debug:
+      msg: "{{group_names}}"
+
+- name: Run as sudo on localhost
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: Show groups
+    debug:
+      msg: "{{group_names}}"
+
+- name: Run on all of inventory (you will need an inventory file)
+  hosts: all
+  become: yes
+  tasks:
+  - name: Show groups
+    debug:
+      msg: "{{group_names}}"
+
+
+- name: Run through playbooks/tasks only 1 host at a time
+  hosts: all
+  become: yes
+  serial: 1
+  tasks:
+  - name: Show groups
+    debug:
+      msg: "{{group_names}}"
+
+
+- name: Run through only a specific group
+  hosts: some_group
+  tasks:
+  - name: Show groups
+    debug:
+      msg: "{{group_names}}"
+
+
+- name: Run through playbooks/tasks only 1 host at a time
+  when: group_bool == True
+  hosts: all
+  become: yes
+  serial: 1
+  tasks:
+  - name: Show groups
+    debug:
+      msg: "{{group_names}}"
+

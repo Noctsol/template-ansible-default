@@ -1,0 +1,5 @@
+# Run something like ansible-playbook -i ./inventory/{inventoryfile} -e ./extra_vars/default.yml
+
+runtime_var: something
+runtime_bool: true
+runtime_num : 1
