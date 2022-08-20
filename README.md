@@ -1,11 +1,15 @@
 # template-ansible-default
-Noctsol's ansible template
+This is the repository I use as a template for ansible. It has the proper folder structure to run ansible and has actual examples.
+Feel free to use it!
 
-Has the proper folder structure to run ansible and has actual example
+**Version Info**
+- ansible [core 2.13.3]
+- python version = 3.10.4 
+- jinja version = 3.0.3
 
 - **Inventory**
-  - **Default** - Contains an inventoryfiles in INI and YML Formats   
-  - **Cloud** - Contains Dynamic Inventory Examples for the following cloud providers
+  - **Default** - Contains inventory files in INI and YML Formats   
+  - **Cloud** - Contains dynamic inventory examples for the following cloud providers:
     - AWS
     - Azure
     - Google
